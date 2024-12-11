@@ -33,11 +33,14 @@ const Feedback = ({ params }) => {
     setFeedbackList(result);
   };
   const calculateRating = () => {
-    var sum = 0;
-    for (let i = 0; i < feedbackList.length; i++) {
-      sum += feedbackList[i].rating;
+    let sum = 0;
+    let n = feedbackList.length;
+    for (let i = 0; i < n; i++) {
+      let rate = parseInt(feedbackList[i].rating,10);
+      sum = sum + rate;
     }
-    setAvgRating(sum);
+    let avg = sum / feedbackList.length;
+    setAvgRating(avg);
   };
   return (
     <div className="p-10">
