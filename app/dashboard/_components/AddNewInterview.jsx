@@ -33,7 +33,6 @@ const AddNewInterview = () => {
   const onSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    console.log(jobPosition, jobDesc, jobExperience);
     const InputPrompt =
       "Job Position:" +
       jobPosition +
@@ -45,7 +44,7 @@ const AddNewInterview = () => {
       process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT +
       "interview questions with answer in json format. Give question and answer as fields in json";
     const result = await chatSession.sendMessage(InputPrompt);
-    const MockjsonResp = result.response
+    const MockjsonResp = result.response 
       .text()
       .replace("```json", "")
       .replace("```", "");
@@ -64,7 +63,6 @@ const AddNewInterview = () => {
           createdAt: moment().format("DD-MM-YYYY"),
         })
         .returning({ mockId: MockInterview.mockId });
-      console.log("inserted id:", resp);
       if (resp) {
         setOpenDialog(false);
         router.push("/dashboard/interview/" + resp[0]?.mockId);
@@ -87,7 +85,7 @@ const AddNewInterview = () => {
       <Dialog open={openDialog}>
         <DialogContent className="max-w-2xl">
           <DialogHeader>
-            <DialogTitle className="text-2xl">
+            <DialogTitle className="text-2xl">  
               Tell us more about your job interview
             </DialogTitle>
             <DialogDescription>
