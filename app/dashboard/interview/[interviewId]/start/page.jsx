@@ -22,7 +22,9 @@ const StartInterview = ({ params }) => {
       .select()
       .from(MockInterview)
       .where(eq(MockInterview.mockId, params.interviewId));
-    const jsonMockResp = JSON.parse(result[0].jsonMockResp);
+    const jsonMockResp = JSON.parse(
+      result[0].jsonMockResp.match(/\[[\s\S]*\]/)?.[0]
+    );
     setMockInterviewQuestion(jsonMockResp);
     setInterviewData(result[0]);
   };
