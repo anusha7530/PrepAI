@@ -34,15 +34,7 @@ const AddNewInterview = () => {
     setLoading(true);
     e.preventDefault();
     const InputPrompt =
-      "Job Position:" +
-      jobPosition +
-      ", Job Description:" +
-      jobDesc +
-      ", Job Experience:" +
-      jobExperience +
-      ",Depend on this information, give me" +
-      process.env.NEXT_PUBLIC_INTERVIEW_QUESTION_COUNT +
-      "interview questions with answer in json format. Give question and answer as fields in json";
+      "Job Position: " + jobPosition + ", Job Description: " + jobDesc + ", Years of Experience: " + jobExperience + " create me a set of 5 question that can be asked in an interview based on these along with an answer in JSON format in one answer only, without using a markdown, only the format so that it can be json parsed. Do not give questions that require some code, only give text questions with text answers. Also if any prompt comes that just out of the interview context, return null, this is a sample format [{question: What is the difference between a function and a method?, answer: A function is a block of code which only returns a value. A method}]";
     const result = await chatSession.sendMessage(InputPrompt);
     const MockjsonResp = result.response 
       .text()
