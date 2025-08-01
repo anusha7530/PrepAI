@@ -35,12 +35,36 @@ const Header = () => {
                 Dashboard
               </Link>
               <Link
-                href={"/dashboard/questions"}
+                href={"/dashboard/mocks"}
                 className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  path == "/dashboard/questions" && "text-primary font-bold"
+                  path == "/dashboard/mocks" && "text-primary font-bold"
                 }`}
               >
-                Questions
+                Mock Interview
+              </Link>
+              <Link
+                href={"/dashboard/quiz"}
+                className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  path == "/dashboard/quiz" && "text-primary font-bold"
+                }`}
+              >
+                Quiz
+              </Link>
+              <Link
+                href={"/dashboard/resume"}
+                className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  path == "/dashboard/resume" && "text-primary font-bold"
+                }`}
+              >
+                Resume Builder
+              </Link>
+              <Link
+                href={"/dashboard/cover"}
+                className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  path == "/dashboard/cover" && "text-primary font-bold"
+                }`}
+              >
+                Cover Letter Generator
               </Link>
               <Link
                 href={"/dashboard/upgrade"}
@@ -49,14 +73,6 @@ const Header = () => {
                 }`}
               >
                 Upgrade
-              </Link>
-              <Link
-                href={"/dashboard/how"}
-                className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  path == "/dashboard/how" && "text-primary font-bold"
-                }`}
-              >
-                How it Works?
               </Link>
             </div>
           </div>
@@ -98,12 +114,36 @@ const Header = () => {
                 Dashboard
               </Link>
               <Link
-                href={"/dashboard/questions"}
+                href={"/dashboard/mocks"}
                 className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
-                  path == "/dashboard/questions" && "text-primary font-bold"
+                  path == "/dashboard/mocks" && "text-primary font-bold"
                 }`}
               >
-                Questions
+                Mock-Interview
+              </Link>
+              <Link
+                href={"/dashboard/quiz"}
+                className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
+                  path == "/dashboard/quiz" && "text-primary font-bold"
+                }`}
+              >
+                Quiz
+              </Link>
+              <Link
+                href={"/dashboard/resume"}
+                className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
+                  path == "/dashboard/resume" && "text-primary font-bold"
+                }`}
+              >
+                Resume Builder
+              </Link>
+              <Link
+                href={"/dashboard/cover"}
+                className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
+                  path == "/dashboard/cover" && "text-primary font-bold"
+                }`}
+              >
+                Cover Letter Generator
               </Link>
               <Link
                 href={"/dashboard/upgrade"}
@@ -113,14 +153,7 @@ const Header = () => {
               >
                 Upgrade
               </Link>
-              <Link
-                href={"/dashboard/how"}
-                className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
-                  path == "/dashboard/how" && "text-primary font-bold"
-                }`}
-              >
-                How it Works?
-              </Link>
+              
               {user ? <UserButton/> : <Link href={"/dashboard"}>
                 <button className="w-full mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
                   Login
