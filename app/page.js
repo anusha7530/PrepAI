@@ -172,13 +172,13 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* AI MCQ Generator */}
+            {/* AI Quiz Generator */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
               <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
                 <BookOpen className="h-6 w-6 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                AI MCQ Generator
+                AI Quiz Generator
               </h3>
               <p className="text-gray-600 mb-4">
                 Practice with unlimited multiple-choice questions tailored to
