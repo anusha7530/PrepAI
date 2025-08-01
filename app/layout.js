@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "PrepAI",
+  title: "PrepAI - AI-Powered Interview Preparation & Career Tools",
   description: "Get ready for your interviews",
 };
 
