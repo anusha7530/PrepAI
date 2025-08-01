@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { db } from "../../../../utils/db";
-import { MockInterview } from "../../../../utils/schema";
+import { db } from "../../../../../utils/db";
+import { MockInterview } from "../../../../../utils/schema";
 import { eq } from "drizzle-orm";
 import Webcam from "react-webcam";
 import { Lightbulb, WebcamIcon } from "lucide-react";
@@ -71,7 +71,7 @@ const Interview = ({ params }) => {
         </div>
       </div>
       <div className="flex justify-end items-end">
-        <Link href={"/dashboard/interview/" + params.interviewId + "/start"}>
+        <Link href={"/dashboard/mocks/interview/" + params.interviewId + "/start"}>
           <Button>Start Interview</Button>
         </Link>
       </div>

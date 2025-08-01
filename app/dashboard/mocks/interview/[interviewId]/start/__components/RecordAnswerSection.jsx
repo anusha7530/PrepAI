@@ -6,9 +6,9 @@ import React, { useEffect, useState } from "react";
 import useSpeechToText from "react-hook-speech-to-text";
 import { Mic, StopCircle } from "lucide-react";
 import { toast } from "sonner";
-import { chatSession } from "../../../../../../utils/GeminiAIModal";
-import { UserAnswer } from "../../../../../../utils/schema";
-import { db } from "../../../../../../utils/db";
+import { chatSession } from "../../../../../../../utils/GeminiAIModal";
+import { UserAnswer } from "../../../../../../../utils/schema";
+import { db } from "../../../../../../../utils/db";
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
 

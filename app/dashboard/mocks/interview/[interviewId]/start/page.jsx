@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { db } from "../../../../../utils/db";
-import { MockInterview } from "../../../../../utils/schema";
+import { db } from "../../../../../../utils/db";
+import { MockInterview } from "../../../../../../utils/schema";
 import { eq } from "drizzle-orm";
 import QuestionsSection from "./__components/QuestionsSection";
 import RecordAnswerSection from "./__components/RecordAnswerSection";
@@ -60,7 +60,7 @@ const StartInterview = ({ params }) => {
         )}
         {activeQuestionIndex == mockInterviewQuestion?.length - 1 && (
           <Link
-            href={"/dashboard/interview/" + interviewData?.mockId + "/feedback"}
+            href={"/dashboard/mocks/interview/" + interviewData?.mockId + "/feedback"}
           >
             <Button>End Interview</Button>
           </Link>

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { db } from "../../../../../utils/db";
-import { UserAnswer } from "../../../../../utils/schema";
+import { db } from "../../../../../../utils/db";
+import { UserAnswer } from "../../../../../../utils/schema";
 import { eq } from "drizzle-orm";
 import {
   Collapsible,
@@ -98,8 +98,8 @@ const Feedback = ({ params }) => {
             ))}
         </>
       )}
-      <Button onClick={() => router.replace("/dashboard")} className="mt-10">
-        Go Home
+      <Button onClick={() => router.replace("/dashboard/mocks")} className="mt-10">
+        Go Back
       </Button>
     </div>
   );
