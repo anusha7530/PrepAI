@@ -62,7 +62,7 @@ const StartQuiz = ({ params }) => {
 
     if (resp) {
       toast("Quiz completed successfully.");
-      router.push("/dashboard/quiz/" + resp[0]?.quizId + "/feedback");
+      router.push("/dashboard/quiz/" + params.quizid + "/feedback");
     }
     setLoading(false);
   };

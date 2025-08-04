@@ -43,7 +43,35 @@ const Dashboard = () => {
               </ul>
             </Link>
           </div>
-
+          {/* AI Quiz Generator */}
+          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
+            <Link href={"/dashboard/quiz"}>
+              <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                <BookOpen className="h-6 w-6 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                AI Quiz Generator
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Practice with unlimited multiple-choice questions tailored to
+                your field and experience level.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-2">
+                <li className="flex items-center">
+                  <Check className="h-4 w-4 text-green-500 mr-2" />
+                  Domain-specific questions
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-4 w-4 text-green-500 mr-2" />
+                  Detailed explanations
+                </li>
+                <li className="flex items-center">
+                  <Check className="h-4 w-4 text-green-500 mr-2" />
+                  Progress tracking
+                </li>
+              </ul>
+            </Link>
+          </div>
           {/* AI Resume Builder */}
           <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
             <Link href={"/dashboard/resume"}>
@@ -99,35 +127,6 @@ const Dashboard = () => {
                 <li className="flex items-center">
                   <Check className="h-4 w-4 text-green-500 mr-2" />
                   Industry-specific
-                </li>
-              </ul>
-            </Link>
-          </div>
-          {/* AI Quiz Generator */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100">
-            <Link href={"/dashboard/cover"}>
-              <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <BookOpen className="h-6 w-6 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                AI Quiz Generator
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Practice with unlimited multiple-choice questions tailored to
-                your field and experience level.
-              </p>
-              <ul className="text-sm text-gray-500 space-y-2">
-                <li className="flex items-center">
-                  <Check className="h-4 w-4 text-green-500 mr-2" />
-                  Domain-specific questions
-                </li>
-                <li className="flex items-center">
-                  <Check className="h-4 w-4 text-green-500 mr-2" />
-                  Detailed explanations
-                </li>
-                <li className="flex items-center">
-                  <Check className="h-4 w-4 text-green-500 mr-2" />
-                  Progress tracking
                 </li>
               </ul>
             </Link>
