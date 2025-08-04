@@ -2,7 +2,7 @@
 import { useUser } from "@clerk/nextjs";
 import React, { useEffect, useState } from "react";
 import { db } from "../../../../utils/db";
-import { MockInterview, users } from "../../../../utils/schema";
+import { MockInterview } from "../../../../utils/schema";
 import { desc, eq } from "drizzle-orm";
 import InterviewItemCard from "./InterviewItemCard";
 
