@@ -1,8 +1,8 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
 import React, { useEffect, useState } from "react";
-import { db } from "../../../utils/db";
-import { MockInterview } from "../../../utils/schema";
+import { db } from "../../../../utils/db";
+import { MockInterview, users } from "../../../../utils/schema";
 import { desc, eq } from "drizzle-orm";
 import InterviewItemCard from "./InterviewItemCard";
 
@@ -23,7 +23,6 @@ const InterviewList = () => {
       )
       .orderBy(desc(MockInterview.id));
 
-    console.log(result);
     setInterviewList(result);
   };
   return (

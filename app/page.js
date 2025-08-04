@@ -1,5 +1,3 @@
-"use client";
-import { useState } from "react";
 import Link from "next/link";
 import Header from "../app/dashboard/_components/Header";
 import {
@@ -20,7 +18,6 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-white">

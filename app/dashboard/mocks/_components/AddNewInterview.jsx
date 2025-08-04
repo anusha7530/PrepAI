@@ -11,9 +11,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { chatSession } from "../../../utils/GeminiAIModal";
-import { db } from "../../../utils/db";
-import { MockInterview } from "../../../utils/schema";
+import { chatSession } from "../../../../utils/GeminiAIModal";
+import { db } from "../../../../utils/db";
+import { MockInterview } from "../../../../utils/schema";
 import { LoaderCircle } from "lucide-react";
 import { v4 as uuidv4 } from "uuid";
 import { useUser } from "@clerk/nextjs";
@@ -41,7 +41,7 @@ const AddNewInterview = () => {
       .replace("```json", "")
       .replace("```", "");
     setJsonResponse(MockjsonResp);
-
+   
     if (MockjsonResp) {
       const resp = await db
         .insert(MockInterview)
@@ -52,7 +52,7 @@ const AddNewInterview = () => {
           jobDesc: jobDesc,
           jobExperience: jobExperience,
           createdBy: user?.primaryEmailAddress?.emailAddress,
-          createdAt: moment().format("DD-MM-YYYY"),
+          createdAt: moment().format("DD-MM-YYYY"), 
         })
         .returning({ mockId: MockInterview.mockId });
       if (resp) {
@@ -119,7 +119,7 @@ const AddNewInterview = () => {
                   <Button
                     type="button"
                     variant="ghost"
-                    onClick={() => setOpenDialog(false)}
+                    onClick={() => {setOpenDialog(false); setLoading(false)}}
                   >
                     Cancel
                   </Button>
