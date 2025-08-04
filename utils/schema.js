@@ -22,3 +22,16 @@ export const UserAnswer = pgTable("userAnswer", {
   userEmail: varchar("userEmail"),
   createdAt: varchar("createdAt"),
 });
+
+export const QuizQues = pgTable("quizques", {
+  id: serial("id").primaryKey(),
+  jsonQuizResp: text("jsonQuizResp").notNull(),
+  skills: varchar("skills").notNull(),
+  difficulty: varchar("difficulty").notNull(),
+  category: varchar("category").notNull(),
+  createdBy: varchar("createdBy").notNull(),
+  createdAt: varchar("createdAt").notNull(),
+  quizId: varchar("quizId").notNull(),
+  userAns: text("userAns"),
+  score: varchar("score"),
+});
