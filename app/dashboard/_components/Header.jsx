@@ -27,14 +27,6 @@ const Header = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
-                href={"/dashboard"}
-                className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  path == "/dashboard" && "text-primary font-bold"
-                }`}
-              >
-                Dashboard
-              </Link>
-              <Link
                 href={"/dashboard/mocks"}
                 className={`text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   path == "/dashboard/mocks" && "text-primary font-bold"
@@ -105,14 +97,6 @@ const Header = () => {
         {mobileMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <Link
-                href={"/dashboard"}
-                className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
-                  path == "/dashboard" && "text-primary font-bold"
-                }`}
-              >
-                Dashboard
-              </Link>
               <Link
                 href={"/dashboard/mocks"}
                 className={`text-gray-500 hover:text-primary block px-3 py-2 rounded-md text-base font-medium ${
