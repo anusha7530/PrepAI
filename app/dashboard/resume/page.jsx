@@ -12,15 +12,14 @@ export default function ResumePage() {
 
   useEffect(() => {
     user && GetResume();
-
   }, [user]);
-  
+
   const GetResume = async () => {
     const result = await db
       .select()
       .from(Resumes)
       .where(eq(Resumes.createdBy, user?.primaryEmailAddress?.emailAddress));
-      setResume(result[0]);
+    setResume(result[0]);
   };
 
   return (

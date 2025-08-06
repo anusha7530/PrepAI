@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -23,7 +23,6 @@ import { EntryForm } from "./entry-form";
 import { useUser } from "@clerk/nextjs";
 import { entriesToMarkdown } from "../../../../utils/helper";
 import { resumeSchema } from "../../../../utils/zodSchema";
-
 
 export default function ResumeBuilder({ initialContent }) {
   const [activeTab, setActiveTab] = useState("edit");

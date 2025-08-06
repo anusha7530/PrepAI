@@ -71,7 +71,9 @@ const Interview = ({ params }) => {
         </div>
       </div>
       <div className="flex justify-end items-end">
-        <Link href={"/dashboard/mocks/interview/" + params.interviewId + "/start"}>
+        <Link
+          href={"/dashboard/mocks/interview/" + params.interviewId + "/start"}
+        >
           <Button>Start Interview</Button>
         </Link>
       </div>

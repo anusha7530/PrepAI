@@ -4,8 +4,6 @@ import { FileText, Mail, BookOpen, Check, Video } from "lucide-react";
 
 const Dashboard = () => {
   return (
-    // <div className="p-10">
-    //   <h2 className="font-bold text-2xl text-center text-primary">Dashboard</h2>
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -134,7 +132,6 @@ const Dashboard = () => {
         </div>
       </div>
     </section>
-    // </div>
   );
 };
 

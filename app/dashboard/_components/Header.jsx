@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { UserButton, useUser} from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Menu, X, Brain } from "lucide-react";
@@ -16,12 +16,13 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link href="/">
-            <div className="flex-shrink-0 flex items-center">
-              <Brain className="h-8 w-8 text-primary" />
-              <span className="ml-2 text-2xl font-bold text-gray-900">
-                PrepAI
-              </span>
-            </div></Link>
+              <div className="flex-shrink-0 flex items-center">
+                <Brain className="h-8 w-8 text-primary" />
+                <span className="ml-2 text-2xl font-bold text-gray-900">
+                  PrepAI
+                </span>
+              </div>
+            </Link>
           </div>
 
           <div className="hidden md:block">
@@ -70,12 +71,15 @@ const Header = () => {
           </div>
 
           <div className="hidden md:block">
-            {user ? <UserButton/>:
-            <Link href={"/dashboard"}>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
-                Login
-              </button>
-            </Link>}
+            {user ? (
+              <UserButton />
+            ) : (
+              <Link href={"/dashboard"}>
+                <button className="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                  Login
+                </button>
+              </Link>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -137,12 +141,16 @@ const Header = () => {
               >
                 Upgrade
               </Link>
-              
-              {user ? <UserButton/> : <Link href={"/dashboard"}>
-                <button className="w-full mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
-                  Login
-                </button>
-              </Link>}
+
+              {user ? (
+                <UserButton />
+              ) : (
+                <Link href={"/dashboard"}>
+                  <button className="w-full mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                    Login
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
         )}

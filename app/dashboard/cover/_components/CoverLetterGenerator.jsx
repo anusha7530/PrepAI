@@ -27,7 +27,7 @@ export default function CoverLetterGenerator() {
   const router = useRouter();
   const [generating, setGenerating] = useState(false);
   const [generatedLetter, setGeneratedLetter] = useState();
-  const {user} = useUser();
+  const { user } = useUser();
 
   const {
     register,
@@ -48,9 +48,7 @@ export default function CoverLetterGenerator() {
 
   const GenerateLetter = async (data) => {
     const InputPrompt = `
-    Write a professional cover letter for a ${data.jobTitle} position at ${
-      data.companyName
-    }.
+    Write a professional cover letter for a ${data.jobTitle} position at ${data.companyName}.
     
     About the candidate:
     - Industry: ${data.industry}

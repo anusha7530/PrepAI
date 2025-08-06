@@ -14,9 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body
-          className={`${inter.className} antialiased`}
-        >
+        <body className={`${inter.className} antialiased`}>
           <Toaster />
           {children}
         </body>

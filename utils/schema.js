@@ -1,4 +1,11 @@
-import { integer, pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
+import {
+  integer,
+  pgTable,
+  serial,
+  text,
+  timestamp,
+  varchar,
+} from "drizzle-orm/pg-core";
 
 export const MockInterview = pgTable("mockInterview", {
   id: serial("id").primaryKey(),
@@ -43,7 +50,9 @@ export const Resumes = pgTable("resumes", {
   feedback: text("feedback"),
   createdBy: varchar("createdBy").notNull(),
   createdAt: timestamp("createdAt", { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp("updatedAt", { withTimezone: true }).defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
 });
 
 export const CoverLetters = pgTable("cover_letters", {
@@ -55,5 +64,7 @@ export const CoverLetters = pgTable("cover_letters", {
   status: varchar("status", { length: 255 }).default("draft"),
   createdBy: varchar("createdBy").notNull(),
   createdAt: timestamp("createdAt", { withTimezone: true }).defaultNow(),
-  updatedAt: timestamp("updatedAt", { withTimezone: true }).defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
 });

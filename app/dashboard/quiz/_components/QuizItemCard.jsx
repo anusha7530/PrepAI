@@ -16,9 +16,7 @@ const QuizItemCard = ({ quiz }) => {
       <h2 className="text-sm text-gray-600">
         {quiz?.score ? `Score : ${quiz?.score}/10` : `Score : 0/10`}
       </h2>
-      <h2 className="text-xs text-gray-400">
-        Created At: {quiz?.createdAt}
-      </h2>
+      <h2 className="text-xs text-gray-400">Created At: {quiz?.createdAt}</h2>
 
       <div className="flex justify-between mt-2 gap-5">
         <Button

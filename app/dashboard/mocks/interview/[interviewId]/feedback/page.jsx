@@ -98,7 +98,10 @@ const Feedback = ({ params }) => {
             ))}
         </>
       )}
-      <Button onClick={() => router.replace("/dashboard/mocks")} className="mt-10">
+      <Button
+        onClick={() => router.replace("/dashboard/mocks")}
+        className="mt-10"
+      >
         Go to all Mock Interviews
       </Button>
     </div>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,25 +11,25 @@ import { db } from "../../../../utils/db";
 
 export default function EditCoverLetterPage({ params }) {
   const { user } = useUser();
-  const [coverLetter,setCoverLetter] = useState()
+  const [coverLetter, setCoverLetter] = useState();
 
   useEffect(() => {
     user && GetCoverLetter();
-  },[user])
+  }, [user]);
 
   const GetCoverLetter = async () => {
-  const letter = await db
-  .select()
-  .from(CoverLetters)
-  .where(
-    and(
-      eq(CoverLetters.id, params.id),
-      eq(CoverLetters.createdBy, user?.primaryEmailAddress?.emailAddress)
-    )
-  )
-  .limit(1);
-  setCoverLetter(letter[0]);
-}
+    const letter = await db
+      .select()
+      .from(CoverLetters)
+      .where(
+        and(
+          eq(CoverLetters.id, params.id),
+          eq(CoverLetters.createdBy, user?.primaryEmailAddress?.emailAddress)
+        )
+      )
+      .limit(1);
+    setCoverLetter(letter[0]);
+  };
 
   return (
     <div className="container mx-auto py-6">

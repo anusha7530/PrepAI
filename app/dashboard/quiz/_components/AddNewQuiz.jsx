@@ -67,7 +67,7 @@ const AddNewQuiz = () => {
         .returning({ quizId: QuizQues.quizId });
       if (resp) {
         setOpenDialog(false);
-        router.push("/dashboard/quiz/" + resp[0]?.quizId +"/start");
+        router.push("/dashboard/quiz/" + resp[0]?.quizId + "/start");
       }
     } else {
       console.log("error");
@@ -153,7 +153,6 @@ const AddNewQuiz = () => {
 };
 
 export default AddNewQuiz;
-
 
 // {
 //   "questions": [

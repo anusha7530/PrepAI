@@ -87,11 +87,11 @@ export function EntryForm({ type, entries, onChange }) {
     Format the response as a single paragraph without any additional text or explanations.
   `;
 
-      const result = await chatSession.sendMessage(prompt);
-      const response = result.response;
-      const icontent = response.text().trim();
-      setImprovedContent(icontent);
-      setIsImproving(false);
+    const result = await chatSession.sendMessage(prompt);
+    const response = result.response;
+    const icontent = response.text().trim();
+    setImprovedContent(icontent);
+    setIsImproving(false);
   };
 
   useEffect(() => {

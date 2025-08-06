@@ -18,9 +18,7 @@ const QuizList = () => {
     const result = await db
       .select()
       .from(QuizQues)
-      .where(
-        eq(QuizQues.createdBy, user?.primaryEmailAddress?.emailAddress)
-      )
+      .where(eq(QuizQues.createdBy, user?.primaryEmailAddress?.emailAddress))
       .orderBy(desc(QuizQues.id));
 
     setQuizList(result);
