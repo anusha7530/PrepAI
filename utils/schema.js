@@ -45,3 +45,15 @@ export const Resumes = pgTable("resumes", {
   createdAt: timestamp("createdAt", { withTimezone: true }).defaultNow(),
   updatedAt: timestamp("updatedAt", { withTimezone: true }).defaultNow().notNull(),
 });
+
+export const CoverLetters = pgTable("cover_letters", {
+  id: serial("id").primaryKey().unique(),
+  content: text("content").notNull(),
+  jobDescription: text("jobDescription"),
+  companyName: varchar("companyName", { length: 255 }).notNull(),
+  jobTitle: varchar("jobTitle", { length: 255 }).notNull(),
+  status: varchar("status", { length: 255 }).default("draft"),
+  createdBy: varchar("createdBy").notNull(),
+  createdAt: timestamp("createdAt", { withTimezone: true }).defaultNow(),
+  updatedAt: timestamp("updatedAt", { withTimezone: true }).defaultNow().notNull(),
+});
